@@ -154,6 +154,57 @@ ng-invalid-keyExemplo:ng-invalid-required
 
 
 
+## HTTP Form Posting and Data Access
+
+A maneira como trabalhamos com HTTP em angular é usando seu serviço HttpClient, e temos que importar o módulo.
+Além do Handling POST Errors para lidar com erros.
+Recuperar dados para elementos selecionados.
+
+Primeiro criei um Data Service.
+
+## Form Posting Using Observables
+
+Quando publicamos um formulário  para um servidor e esperamos por uma resposta isso é uma operação assincrona. Não
+saberemos quanto tempo ficaremos aguardando a resposta, pode levar alguns milisegundos ou se tivermos uma conexão de rede lenta
+ou um servidor lento, pode levar alguns segundos.
+
+## HTTP Acess Using HttpClient
+
+Configurar um formulário em servidor web real.
+E no Angular podemos fazer isso com o HttpClient que é o serviço interno.
+Para trabalhar com o HttpClient precisamos do HttpClientModule e inseri-lo no app.module.
+
+## Postando o formulário em um endpoint HTTP real
+
+Postaremos o formulário usando uma ferramenta chamada de PutsReq.
+O req é para solicitações(request). Criar uma resposta(response) e envia-la de volta.
+- https://putsreq.com/
+PutsReq permite gravar solicitações HTTP e respostas falsas.
+
+- O método JSON.parse() analisa uma string JSON, construindo o valor ou um objeto JavaScript 
+- código utilizado para transformar em 
+var parsedBody= JSON.parse(request.body);
+
+parsedBody.id='1234';
+response.body=parsedBody;
+
+doc: https://github.com/aevilesaguiar/putsreq
+
+## Handling POST Errors
+
+Quando executamos uma postagem num servidor remoto, geralmente os erros que retornam estão no intervalo de 400,
+que seriam erros do lado do cliente que devem ser corrigidos so lado do cliente ou erros 500 o que significa que algo
+deu erro no servidor.
+
+## verificar lista de interface
+
+https://angular.io/resources?category=development
+
+estudaremos nesse projeto:
+https://valor-software.com/ngx-bootstrap/#/
+
+
+
 
 
 
@@ -162,3 +213,4 @@ ng-invalid-keyExemplo:ng-invalid-required
 
 
 Estudar expressões regulares
+Estudar putsreq
